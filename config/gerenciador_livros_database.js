@@ -1,21 +1,3 @@
-/*
- * GERENCIADOR DE LIVROS - IMPLEMENTAÇÃO COMPLETA COM POSTGRESQL (NEON)
- * 
- * Este arquivo contém toda a implementação necessária para migrar o projeto
- * de gerenciador de livros do sistema JSON para PostgreSQL hospedado no Neon.
- * 
- * INSTRUÇÕES DE USO:
- * 1. Instale as dependências: npm install pg dotenv
- * 2. Configure o arquivo .env com sua string de conexão do Neon
- * 3. Execute o script SQL de criação do banco (seção SQL SCRIPTS)
- * 4. Substitua o controller existente pelo código da seção CONTROLLER
- * 5. Adicione a configuração do banco na seção DATABASE CONFIG
- */
-
-// ============================================================================
-// SEÇÃO 1: CONFIGURAÇÃO DO BANCO DE DADOS
-// ============================================================================
-
 const { Pool } = require("pg");
 require("dotenv").config();
 
@@ -48,10 +30,6 @@ const query = async (text, params) => {
     throw err;
   }
 };
-
-// ============================================================================
-// SEÇÃO 2: FUNÇÕES DO BANCO DE DADOS
-// ============================================================================
 
 // Função para obter todos os livros
 const getAllBooks = async () => {
@@ -89,11 +67,7 @@ const deleteBook = async (id) => {
   return result.rows[0];
 };
 
-// ============================================================================
-// SEÇÃO 3: CONTROLLER ATUALIZADO
-// ============================================================================
 
-// Controller para gerenciar operações dos livros
 const booksController = {
   
   // GET /api/books - Obter todos os livros
