@@ -4,7 +4,9 @@ const allowedOrigins = [
   'http://127.0.0.1:3000',
   'http://127.0.0.1:3001',
   'https://biblioteca-pessoal-test-2.vercel.app',
-  'http://biblioteca-pessoal-test-2.vercel.app'
+  'http://biblioteca-pessoal-test-2.vercel.app',
+  'https://*.vercel.app',
+  'https://biblioteca-pessoal-test-2-bakcend.vercel.app'
 ];
 
 const corsOptions = {
